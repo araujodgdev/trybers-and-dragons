@@ -6,9 +6,6 @@ export default abstract class Race {
     this._dexterity = dexterity;
   }
 
-  private static raceCount = 0;
-  private static inRaceClass = true;
-
   get name(): string {
     return this._name;
   }
@@ -18,11 +15,7 @@ export default abstract class Race {
   }
 
   static createdRacesInstances(): number {
-    if (Race.inRaceClass) {
-      throw new Error('Not implemented'); 
-    }
-
-    return Race.raceCount;
+    throw new Error('Not implemented'); 
   }
 
   abstract get maxLifePoints(): number;
