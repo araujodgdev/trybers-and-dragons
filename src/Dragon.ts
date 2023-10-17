@@ -1,8 +1,8 @@
 import Monster from './Monster';
 
 export default class Dragon extends Monster {
-  constructor() {
-    super(999, 100);
+  constructor(strength = 100) {
+    super(999, strength);
   }
 
   get lifePoints(): number {
